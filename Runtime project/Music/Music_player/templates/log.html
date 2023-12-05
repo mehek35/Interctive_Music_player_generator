@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+* {box-sizing: border-box}
+input[type=text], input[type=password] {
+   text-align:center;
+   width: 30%;
+   font-size: 28px;
+   padding: 15px;
+   margin: 5px 0 18px 0;
+   display: inline-block;
+   border:5;
+   border-radius:50px;
+   background: #f1f1f1;
+}
+*{
+ text-align:center;
+ }
+label{
+   font-size:30px;
+   color:white;
+}
+input[type=text]:focus, input[type=password]:focus {
+   background-color: #ddd;
+   outline: none;
+}
+hr {
+   border: 1px solid #f1f1f1;
+   margin-bottom: 25px;
+}
+button {
+   font-size: 30px;
+   font-weight: bold;
+   background-color: rgb(10, 119, 13);
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   cursor: pointer;
+   width: 40%;
+   opacity: 0.9;
+}
+button:hover {
+   opacity:1;
+}
+
+.formContainer {
+   padding:16px;
+}
+
+
+</style>
+<body bgcolor="black">
+   
+   <form action="/log.html/" method = "POST">
+
+      {% csrf_token %}
+   
+      <div class="formContainer">
+      <h1 style=font-size:300%;color:white;>LOGIN FORM</h1>
+      <hr>
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter username" name="username"><br>
+      <label><b>Password</b></label>
+      &nbsp;&nbsp;
+      <input type="password" placeholder="Enter Password" name="password"><br>
+
+      <div>
+         <button type="submit" class="signup" style="border-radius:50px";>LOGIN</button>
+      </div>
+      <!--<input type="submit">-->
+      
+      </div>
+
+   </form>
+
+   
+</body>
+</html>
